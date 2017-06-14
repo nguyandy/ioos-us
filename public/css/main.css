@@ -861,6 +861,11 @@ div.anchor {
   font-style: italic;
 }
 
+img[alt="Modeled Hypoxia for Summer 2015"] {
+  width: 50%;
+  margin-left: 15px;
+}
+
 /*  END comt/projects/:project */
 
 /*  BEGIN comt/projects/:project/:dataset */
