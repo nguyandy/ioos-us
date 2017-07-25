@@ -123,4 +123,12 @@ router.get('/comt/projects/:title_key/:dataset', function(req, res, next) {
   });
 });
 
+/* GET comt model viewer redirect. */
+router.get('/comt/model_viewer', function(req, res, next) {
+  res.writeHead(301,
+    {Location: 'http://oceansmap.com/comt/'}
+  );
+  res.end();
+});
+
 module.exports = router;
