@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const title = 'The U.S. Integrated Ocean Observing System (IOOS) | ';
+const path = require('path');
 
 
 /* GET home page. */
@@ -121,6 +122,19 @@ router.get('/comt/projects/:title_key/:dataset', function(req, res, next) {
     title_key: req.params.title_key,
     subProjectTitle: req.query.t
   });
+});
+
+/* GET comt model viewer redirect. */
+router.get('/comt/model_viewer', function(req, res, next) {
+  res.writeHead(301,
+    {Location: 'http://oceansmap.com/comt/'}
+  );
+  res.end();
+});
+
+/* GET comt pr_inundation gifs */
+router.get('/comt/projects/pr_inundation/georges/2016/05/:filename', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../public/images/comt/', req.params.filename));
 });
 
 module.exports = router;
