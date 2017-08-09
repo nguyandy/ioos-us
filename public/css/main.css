@@ -495,6 +495,11 @@ a.mbon {
   background-image    : url("/images/demonstrations-tile.jpg");
 }
 
+a.comt {
+  background-image    : url("/images/comt-tile.png");
+  background-size     : cover;
+}
+
 a.surf-cam {
   background-image    : url("/images/surf-cam.png");
 }
