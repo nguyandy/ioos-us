@@ -865,6 +865,11 @@ div.anchor {
   visibility: hidden;
 }
 
+p.caption {
+  font-style: italic;
+  text-align: center;
+}
+
 /* END comt/projects */
 
 /*  BEGIN comt/projects/:project */
