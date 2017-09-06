@@ -549,7 +549,6 @@ iframe.twitter-timeline {
 	position:fixed;
 	left:-3px;
 	top:40%;
-  z-index:2000;
   overflow:hidden;
   cursor:pointer;
 }
@@ -566,6 +565,14 @@ iframe.twitter-timeline {
 #feedbackForm .modal-body .well:last-of-type {
   margin-left: 11px;
 }
+
+#feedbackForm .form-group {
+    margin-bottom: 0;
+    }
+    
+ #feedbackForm .form-group span.glyphicon {
+     visibility: hidden;
+    }
 
 footer {
   font-family         : Roboto, sans-serif;
