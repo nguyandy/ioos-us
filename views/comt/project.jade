@@ -9,7 +9,7 @@ block body
 
   each project in data.projectTitles
     if project.title_key === title_key
-      - nav += '<li class="active"><a href="#' + data.project.id + '">' + data.project.title + '</a>'
+      - nav += '<li class="active"><a href="#' + data.project.id + '">' + data.project.title + '</a></li>'
       - nav += '<ul class="nav">'
       each val, index in data.project
         if index === 'id'
@@ -34,7 +34,7 @@ block body
         - subCount++
     else
       - nav += '<li><a href="/comt/projects/' + project.title_key + '">' + project.title + '</a></li>'
-    - nav += '</li>'
+
     - subCount = 0
   - nav += '</ul></nav></div>'
   - content += '</div>'
