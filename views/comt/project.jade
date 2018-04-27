@@ -6,6 +6,7 @@ block body
   - var content = '<div class="col-md-9" role="main">'
   - var subCount = 0
   - var page = path
+  - var currentTitle = ''
 
   each project in data.projectTitles
     if project.title_key === title_key
@@ -32,6 +33,7 @@ block body
           if index === 'Publications'
             - nav += '</ul>'
         - subCount++
+        - currentTitle = data.project.title
     else
       - nav += '<li><a href="/comt/projects/' + project.title_key + '">' + project.title + '</a></li>'
 
@@ -40,6 +42,12 @@ block body
   - content += '</div>'
 
   div#main-container.container.comt-projects
+    div.row
+      ol.breadcrumb
+        li
+          a(href='/comt')= 'Coastal and Ocean Modeling Testbed'
+        li.active
+          !{currentTitle}
     div.row
       | !{nav}
       | !{content}
