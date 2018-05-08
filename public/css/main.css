@@ -561,6 +561,7 @@ iframe.twitter-timeline {
   top:40%;
   overflow:hidden;
   cursor:pointer;
+  z-index: 10000;
 }
 
 #feedback:hover{
