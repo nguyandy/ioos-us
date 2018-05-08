@@ -551,10 +551,6 @@ iframe.twitter-timeline {
   border: 1px solid #ddd !important;
 }
 
-#contact-us-container {
-  margin-bottom: 50px;
-}
-
 #feedback{
   border:0px solid #fff;
   background:#660000 url('/images/feedback-tab-left.png') top left no-repeat;
@@ -565,6 +561,7 @@ iframe.twitter-timeline {
   top:40%;
   overflow:hidden;
   cursor:pointer;
+  z-index: 10000;
 }
 
 #feedback:hover{
