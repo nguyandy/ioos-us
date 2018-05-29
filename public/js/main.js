@@ -41,7 +41,7 @@ $(function() {
   function searchCatalog () {
     var query = $('input').val().trim();
     if (query !== "") {
-      window.open(CATALOG_URL + query, "_blank");
+      window.open(CATALOG_URL + query, "_self");
     }
   }
   $('#search-input-collapse input').on('keyup', function(e) {
