@@ -38,4 +38,9 @@ router.get('/comt/model_viewer', function(req, res, next) {
   res.end();
 });
 
+/* GET Compliance Checker landing page */
+router.get('/compliance-checker', function(req, res, next) {
+  res.render('compliance-checker', { title: title + 'Compliance Checker' });
+});
+
 module.exports = router;
