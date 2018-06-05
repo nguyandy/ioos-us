@@ -137,4 +137,9 @@ router.get('/comt/projects/pr_inundation/georges/2016/05/:filename', function(re
   res.sendFile(path.join(__dirname, '../public/images/comt/', req.params.filename));
 });
 
+/* GET Compliance Checker landing page */
+router.get('/compliance-checker', function(req, res, next) {
+  res.render('compliance-checker', { title: title + 'Compliance Checker' });
+});
+
 module.exports = router;
