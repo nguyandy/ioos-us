@@ -39,4 +39,17 @@ router.get('/comt/model_viewer', function(req, res, next) {
   res.end();
 });
 
+<<<<<<< HEAD
+=======
+/* GET comt pr_inundation gifs */
+router.get('/comt/projects/pr_inundation/georges/2016/05/:filename', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../public/images/comt/', req.params.filename));
+});
+
+/* GET Compliance Checker landing page */
+router.get('/compliance-checker', function(req, res, next) {
+  res.render('compliance-checker', { title: title + 'Compliance Checker' });
+});
+
+>>>>>>> Compliance Checker landing page
 module.exports = router;
