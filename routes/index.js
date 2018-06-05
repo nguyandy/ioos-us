@@ -29,10 +29,6 @@ router.get('/surf-cam', function(req, res, next) {
 router.get('/comt', function(req, res, next) {
   res.redirect(301, 'https://comt.ioos.us');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 6e8a933... Moving comt to a separate repo
 
 /* GET comt model viewer redirect. */
 router.get('/comt/model_viewer', function(req, res, next) {
