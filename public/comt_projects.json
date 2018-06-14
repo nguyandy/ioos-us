@@ -91,6 +91,7 @@
             "title": "Cyber Infrastructure",
             "pubs": null,
             "team": "<p><b>Project Lead:</b> Eoin Howlett (RPS)</p><p><b>CO-PIs:</b> Brian McKenna (RPS), Kelly Knee (RPS)</p><p><b>Collaborators:</b> Dr. Rick Luettich (UNC); Reid Nichols (SURA)</p><p><b>Federal Partners:</b> Becky Baltes (NOAA), Derrick Snowden (NOAA)</p>",
+            "resources":"<a href=\"https://github.com/sci-wms/sci-wms\" target=\"_blank\" >https://github.com/sci-wms/sci-wms</a><br><a href=\"/images/comt-dm-plan.pdf\" target=\"_blank\" >COMT DM Plan Feb 6 2018</a>",
             "id": 7,
             "title_key": "cyber_infrastructure"
         }
