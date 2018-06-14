@@ -62,6 +62,7 @@ router.get('/comt/projects/:title_key', function(req, res, next) {
           "Model Descriptions": p.model_desc,
           "Sub-Project Descriptions/Data": p.sub_project_desc,
           "Publications": p.pubs,
+          "Resources": p.resources,
           title_key: p.title_key
         };
   });
