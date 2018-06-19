@@ -530,7 +530,8 @@ a.atn {
 
 a.metrics span.glyphicon-signal,
 a.comt span.glyphicon-th,
-a.data-discovery span.glyphicon-search {
+a.data-discovery span.glyphicon-search,
+a.compliance-checker span.glyphicon-ok {
   position    : absolute;
   font-size   : 215px;
   opacity     : .4;
