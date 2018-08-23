@@ -30,11 +30,6 @@ router.get('/comt', function(req, res, next) {
   res.redirect(301, 'https://comt.ioos.us');
 });
 
-/* GET OSMC landing page */
-+router.get('/osmc', function(req, res, next) {
-  res.render('osmc', { title: title + 'NOAA Observing System Monitoring Center' });
-});
-
 
 /* GET comt model viewer redirect. */
 router.get('/comt/model_viewer', function(req, res, next) {
