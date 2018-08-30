@@ -528,8 +528,8 @@ a.hf-radar {
 }
 
 a.osmc {
-  background-image    : url("/images/OSMC_tile.png");
-  background-size     : 150%;
+  background-image    : url("/images/osmc-tile.png");
+  background-size     : 100%;
 }
 
 a.ocean-acidification {
