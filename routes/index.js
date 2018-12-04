@@ -30,13 +30,17 @@ router.get('/comt', function(req, res, next) {
   res.redirect(301, 'https://comt.ioos.us');
 });
 
-
 /* GET comt model viewer redirect. */
 router.get('/comt/model_viewer', function(req, res, next) {
   res.writeHead(301,
     {Location: 'http://oceansmap.com/comt/'}
   );
   res.end();
+});
+
+/* GET Compliance Checker landing page */
+router.get('/compliance-checker', function(req, res, next) {
+  res.render('compliance-checker', { title: title + 'Compliance Checker' });
 });
 
 module.exports = router;
