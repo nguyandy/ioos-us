@@ -5,7 +5,7 @@ COPY bin /opt/ioos-us/bin
 COPY public /opt/ioos-us/public
 COPY routes /opt/ioos-us/routes
 COPY views /opt/ioos-us/views
-COPY .bowerrc app.js assets.json bower.json gruntfile.js package.json /opt/ioos-us/
+COPY app.js assets.json gruntfile.js package.json /opt/ioos-us/
 
 # install yarn
 RUN apk update && \
