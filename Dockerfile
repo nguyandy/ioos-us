@@ -1,5 +1,5 @@
 FROM node:13.7.0-alpine
-LABEL RPS Dev-Ops <devops@rpsgroup.com>
+LABEL maintainer="devops@rpsgroup.com"
 
 COPY bin /opt/ioos-us/bin
 COPY public /opt/ioos-us/public
@@ -19,5 +19,8 @@ RUN yarn && \
     /usr/local/lib/node_modules/grunt/bin/grunt
 
 ENV NODE_ENV production
+
+# don't run as root
+USER node
 
 CMD ["node", "bin/www"]
