@@ -1,4 +1,4 @@
-https://travis-ci.com/ioos/ioos-us.svg?branch=master
+[![Build Status](https://travis-ci.com/ioos/ioos-us.svg?branch=master)](https://travis-ci.com/ioos/ioos-us)
 
 # ioos-us
 The homepage for http://ioos.us/
