@@ -1,3 +1,5 @@
+https://travis-ci.com/ioos/ioos-us.svg?branch=master
+
 # ioos-us
 The homepage for http://ioos.us/
 
