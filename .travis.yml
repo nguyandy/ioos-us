@@ -21,3 +21,4 @@ deploy:
   on:
     repo: ioos/ioos-us
     branch: master
+    tags: true
