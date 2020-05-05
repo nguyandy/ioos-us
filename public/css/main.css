@@ -241,6 +241,10 @@ button#search-data-button.btn.btn-default.open span::before
   font-family: 'Roboto Slab', Times, serif;
 }
 
+#search-input-collapse {
+  margin-left: -30px;;
+}
+
 #grid-container > .container-fluid .well {
   margin-bottom: 0;
 }
