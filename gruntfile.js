@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     watch: {
       partials: {
         files: ['assets.json', 'gruntfile.js'],
-        tasks: ['jade'],
+        tasks: ['pug'],
         options: {
         }
       }
