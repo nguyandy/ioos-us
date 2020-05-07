@@ -39,9 +39,11 @@ $ node bin/www
 
 The Docker build is far simpler:
 
-```
-$ docker build -t <tag> -f Dockerfile .
-```
+
+1. `$ docker build -t ioos-us .`
+2. `$ docker run -d -p 3000:3000 ioos-us`
+3. Navigate to http://localhost:3000
+
 
 __NOTE__: ensure that `public/lib` is removed *before* building. If it exists,
 `yarn` will attempt to use the existing one in the Docker build, breaking the symlink
