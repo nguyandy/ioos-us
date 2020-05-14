@@ -7,16 +7,20 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="grid-container" class="container">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      
+      <div class="col-md-12" style="padding-bottom: 8px;">
         <!-- <button id="search-data-button" class="btn btn-default open" type="button" data-toggle="collapse" data-target="#search-input-collapse" aria-expanded="false" aria-controls="search-input-collapse">
           <span>Search IOOS Data</span>
         </button> -->
         <div id="search-input-collapse">
-          <div class="">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search IOOS Data, E.g. Environment" aria-describedby="basic-addon">
+          <div class="well search-bar">
+            <div class="col-md-3">
+              <p class="search-title">Search IOOS Data:</p>
+            </div>
+            <div class="input-group col-md-9">
+              <input type="text" class="form-control" placeholder="E.g. Environment" aria-describedby="basic-addon">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">
                   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
