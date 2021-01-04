@@ -391,7 +391,7 @@ button#search-data-button.btn.btn-default.open span::before
   }
 
   a.grid-item.ocean-acidification .tile-wrap h1 {
-    margin-top: 38%;
+    margin-top: 18%;
   }
 
   a.grid-item.video-portal .tile-wrap h1 {
@@ -558,7 +558,7 @@ a.osmc {
 
 a.ocean-acidification {
   background-image    : url("/images/ocean-acidification.png");
-  background-size     : 230%;
+  background-size     : 120%;
 }
 
 a.atn {
