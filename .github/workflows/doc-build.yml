@@ -24,7 +24,7 @@ jobs:
       shell: bash
 
     - name: docker run
-      run: docker run -d -p 3000:3000 gha-test
+      run: docker run -d -p 3000:3000 gha-test:test01
 
     - name: docker push
       run: docker push testdockngdev/gha-test:test01
