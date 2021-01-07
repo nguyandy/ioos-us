@@ -38,4 +38,3 @@ jobs:
           exit 1
         else
           docker login -u "$DOCKER_USERNAME" --password-stdin <<< "$DOCKER_PASSWORD"
-
