@@ -27,6 +27,12 @@ jobs:
       run: docker run -d -p 3000:3000 gha-test:test01
 
     - name: docker push
-      run: docker push testdockngdev/gha-test:test01
+      run: |
+        if [[ ! -n "$DOCKER_PASSWORD" || ! -n "$DOCKER_USERNAME" ]]; then
+          echo "DOCKER_USERNAME and DOCKER_PASSWORD must be set as environment variables!" >&2
+          exit 1
+        else
+          docker login -u "$DOCKER_USERNAME" --password-stdin <<< "$DOCKER_PASSWORD"
+
 
 
