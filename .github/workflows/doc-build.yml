@@ -31,7 +31,6 @@ jobs:
     - name: docker run
       run: docker run -d -p 3000:3000 gha-test:test01
               
-              
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
       
