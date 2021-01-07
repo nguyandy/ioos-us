@@ -26,5 +26,7 @@ jobs:
     - name: docker run
       run: docker run -d -p 3000:3000 ioos-us
 
+    - name: docker push
+      run: docker push testdockngdev/gha-test:test01
 
 
