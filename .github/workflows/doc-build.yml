@@ -20,11 +20,11 @@ jobs:
       shell: bash
 
     - name: docker build
-      run: docker build -t ioos-us . --no-cache
+      run: docker build -t gha-test:test01 . --no-cache
       shell: bash
 
     - name: docker run
-      run: docker run -d -p 3000:3000 ioos-us
+      run: docker run -d -p 3000:3000 gha-test
 
     - name: docker push
       run: docker push testdockngdev/gha-test:test01
