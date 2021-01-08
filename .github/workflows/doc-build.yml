@@ -16,39 +16,43 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Get tags
-      run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      shell: bash
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
 
-    - name: docker pull
-      run: docker pull node:13.7.0-alpine
-      shell: bash
+    # - name: Get tags
+    #   run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    #   shell: bash
 
-    - name: docker build
-      run: docker build -t gha-test:${{ github.event.release.tag_name }}  . --no-cache
-      shell: bash
+    # - name: docker pull
+    #   run: docker pull node:13.7.0-alpine
+    #   shell: bash
 
-    - name: docker run
-      run: docker run -d -p 3000:3000 gha-test:${{ github.event.release.tag_name }} 
+    # - name: docker build
+    #   run: docker build -t gha-test:test01 . --no-cache
+    #   shell: bash
+
+    # - name: docker run
+    #   run: docker run -d -p 3000:3000 gha-test:test01
               
-    - name: Login to DockerHub
-      uses: docker/login-action@v1 
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    # - name: Login to DockerHub
+    #   uses: docker/login-action@v1 
+    #   with:
+    #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+    #     password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Set up Docker Buildx
-      id: buildx
-      uses: docker/setup-buildx-action@v1
+    # - name: Set up Docker Buildx
+    #   id: buildx
+    #   uses: docker/setup-buildx-action@v1
 
-    - name: Build and push
-      id: docker_build
-      uses: docker/build-push-action@v2
-      with:
-        context: ./
-        file: ./Dockerfile
-        push: true
-        tags: testdockngdev/gha-test:${{ github.event.release.tag_name }} 
+    # - name: Build and push
+    #   id: docker_build
+    #   uses: docker/build-push-action@v2
+    #   with:
+    #     context: ./
+    #     file: ./Dockerfile
+    #     push: true
+    #     tags: testdockngdev/gha-test:latest
 
-    - name: Image digest
-      run: echo ${{ steps.docker_build.outputs.digest }}
+    # - name: Image digest
+    #   run: echo ${{ steps.docker_build.outputs.digest }}
