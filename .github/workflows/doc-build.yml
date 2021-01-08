@@ -1,14 +1,9 @@
-name: doc-build
+name: build-and-push
 
 on:
  release:
    types:
      - published
-        
-# on:
-#   pull_request:
-#   push:
-#     branches: [master]
 
 jobs:
   packages:
@@ -16,24 +11,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Get the version
-      id: get_version
-      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
-
-    # - name: Get tags
-    #   run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    # - name: docker pull
+    #   run: docker pull node:13.7.0-alpine
     #   shell: bash
 
-    - name: docker pull
-      run: docker pull node:13.7.0-alpine
-      shell: bash
+    # - name: docker build
+    #   run: docker build -t gha-test:${{ github.event.release.tag_name }} . --no-cache
+    #   shell: bash
 
-    - name: docker build
-      run: docker build -t gha-test:${{ github.event.release.tag_name }} . --no-cache
-      shell: bash
-
-    - name: docker run
-      run: docker run -d -p 3000:3000 gha-test:${{ github.event.release.tag_name }}
+    # - name: docker run
+    #   run: docker run -d -p 3000:3000 gha-test:${{ github.event.release.tag_name }}
               
     - name: Login to DockerHub
       uses: docker/login-action@v1 
