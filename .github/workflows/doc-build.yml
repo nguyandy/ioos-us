@@ -1,14 +1,14 @@
 name: doc-build
 
-#on:
-#  release:
-#    types:
-#      - published
-        
 on:
-  pull_request:
-  push:
-    branches: [master]
+ release:
+   types:
+     - published
+        
+# on:
+#   pull_request:
+#   push:
+#     branches: [master]
 
 jobs:
   packages:
@@ -29,11 +29,11 @@ jobs:
       shell: bash
 
     - name: docker build
-      run: docker build -t gha-test:${{ steps.get_version.outputs.VERSION }} . --no-cache
+      run: docker build -t gha-test:${{ github.event.release.tag_name }} . --no-cache
       shell: bash
 
     - name: docker run
-      run: docker run -d -p 3000:3000 gha-test:${{ steps.get_version.outputs.VERSION }}
+      run: docker run -d -p 3000:3000 gha-test:${{ github.event.release.tag_name }}
               
     - name: Login to DockerHub
       uses: docker/login-action@v1 
@@ -52,7 +52,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: testdockngdev/gha-test:${{ steps.get_version.outputs.VERSION }}
+        tags: testdockngdev/gha-test:${{ github.event.release.tag_name }}
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
