@@ -24,13 +24,13 @@ jobs:
     #   run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
     #   shell: bash
 
-    # - name: docker pull
-    #   run: docker pull node:13.7.0-alpine
-    #   shell: bash
+    - name: docker pull
+      run: docker pull node:13.7.0-alpine
+      shell: bash
 
-    # - name: docker build
-    #   run: docker build -t gha-test:test01 . --no-cache
-    #   shell: bash
+    - name: docker build
+      run: docker build -t gha-test:${{ steps.get_version.outputs.VERSION }} . --no-cache
+      shell: bash
 
     # - name: docker run
     #   run: docker run -d -p 3000:3000 gha-test:test01
