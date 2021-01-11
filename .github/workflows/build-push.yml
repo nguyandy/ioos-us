@@ -21,8 +21,8 @@ jobs:
       run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
 
     - name: Echo
-        run: echo ${{ steps.get_version.outputs.VERSION }}
-        shell: bash
+      run: echo ${{ steps.get_version.outputs.VERSION }}
+      shell: bash
 
     - name: Login to DockerHub
       uses: docker/login-action@v1 
