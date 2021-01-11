@@ -18,7 +18,7 @@ jobs:
 
     - name: Get the version
       id: get_version
-      echo ::set-output name=VERSION::THISTHEREF
+      run: echo ::set-output name=VERSION::THISTHEREF
       #run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       shell: bash
 
