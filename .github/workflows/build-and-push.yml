@@ -1,9 +1,9 @@
 name: build-and-push
 
 on:
- release:
-   types:
-     - published
+  pull_request:
+  push:
+    branches: [master]
 
 jobs:
   packages:
@@ -28,7 +28,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ioos/ioos-us:${{ github.event.release.tag_name }}
+        tags: ioos/ioos-us:test_20210110
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
