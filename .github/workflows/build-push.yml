@@ -33,7 +33,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: testdockngdev/gha-test:${{ github.event.release.tag_name }}
-
+        tags: testdockngdev/gha-test:23
+        
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
