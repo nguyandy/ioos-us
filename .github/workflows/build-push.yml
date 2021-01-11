@@ -16,9 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: 'Get Previous tag'
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@master"
+
 
     - name: Echo version testing
-      run: echo ${GITHUB_REF}
+      run: echo ${{ steps.previoustag.outputs.tag }}
       shell: bash
 
     - name: Get the version
