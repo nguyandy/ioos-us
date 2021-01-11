@@ -16,6 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+
+    - name: Echo version testing
+      run: echo ${GITHUB_REF}
+      shell: bash
+
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::THISTHEREF
