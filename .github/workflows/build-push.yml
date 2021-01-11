@@ -14,14 +14,17 @@ jobs:
   packages:
     runs-on: ubuntu-latest
     steps:
-    
-      uses: battila7/get-version-action@v2
+    - uses: actions/checkout@v2
 
-    - name : yo yo
+    - name: Get latest release version number
       id: get_version
-      #run: echo ${{ steps.get_version.outputs.version }}
-      run: echo ${{ steps.get_version.outputs.version-without-v }}
-
+      uses: battila7/get-version-action@v2
+    
+    
+    - name: Some other action
+      with:
+        destination_dir: ${{ steps.get_version.outputs.version }}
+      run: echo ${{ steps.get_version.outputs.version }}
 
     - name: Get the version
       id: get_version
