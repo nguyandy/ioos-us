@@ -20,6 +20,10 @@ jobs:
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
+    - name: Get tags
+      run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      shell: bash
+
     - name: Echo
       run: echo ${{ steps.get_version.outputs.VERSION }}
       shell: bash
