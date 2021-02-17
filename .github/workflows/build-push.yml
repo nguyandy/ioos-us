@@ -28,7 +28,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: testdockngdev/gha-test:test_20210110
+        tags: ioos/ioos-us:test_20210217
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
